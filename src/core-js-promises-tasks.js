@@ -115,7 +115,7 @@ function getAllOrNothing(promises) {
  */
 function getAllResult(promises) {
   return Promise.allSettled(promises).then((results) =>
-    results.map((result) => result.value || null)
+    results.map((result) => result.value ?? null)
   );
 }
 
